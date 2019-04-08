@@ -7,6 +7,14 @@ deploy:
     - echo start
     - sleep 1
     - echo done
+  variables:
+    - name: CLUSTER
+      title: Choose which cluster to deploy to
+      default: 'cluster-a'
+      select:
+        - cluster-a
+        - cluster-b
+        - cluster-c
 
 rollback:
   override:

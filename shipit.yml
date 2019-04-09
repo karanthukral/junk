@@ -11,10 +11,6 @@ deploy:
     - name: CLUSTER
       title: Choose which cluster to deploy to
       default: 'cluster-a'
-      select:
-        - cluster-a
-        - cluster-b
-        - cluster-c
       select_from:
         class: Shipit::ClusterRegistryFetcher
 

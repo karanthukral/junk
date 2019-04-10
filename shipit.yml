@@ -13,8 +13,7 @@ deploy:
     - name: CLUSTER
       title: Choose which cluster to deploy to
       default: 'cluster-a'
-      select_from:
-        class: Shipit::ClusterRegistryFetcher
+      select_from: cluster_registry
     - name: ENV
       title: Environment
       default: 'production'

@@ -5,6 +5,8 @@ ci:
 deploy:
   override:
     - echo start
+    - echo $CLUSTER
+    - ECHO $ENV
     - sleep 1
     - echo done
   variables:

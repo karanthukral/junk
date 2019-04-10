@@ -13,6 +13,12 @@ deploy:
       default: 'cluster-a'
       select_from:
         class: Shipit::ClusterRegistryFetcher
+    - name: ENV
+      title: Environment
+      default: 'production'
+      select:
+        - 'production'
+        - 'staging'
 
 rollback:
   override:

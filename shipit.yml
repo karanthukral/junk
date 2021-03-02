@@ -1,48 +1,7 @@
-ci:
-  blocking:
-    - soc/compliant
-
 deploy:
   override:
-    - echo start
-    - echo $CLUSTER
-    - ECHO $ENV
-    - sleep 1
-    - echo done
-  variables:
-    - name: CLUSTER
-      title: Choose which cluster to deploy to
-      default: 'cluster-a'
-      select_from: cluster_registry
-    - name: ENV
-      title: Environment
-      default: 'production'
-      select:
-        - 'production'
-        - 'staging'
+    - echo "HTML Logs = https://storage.cloud.google.com/gkrane-logs/apps-b-us-central1-3/mobility-test-app-production-unrestricted/2bb04b9bcae81f55535b757b8c89d39e.html"
 
 rollback:
   override:
     - echo done
-
-tasks:
-  restart:
-    action: Restart application
-    description: Trigger the restart of both app and jobs servers
-    steps:
-      - cap $ENVIRONMENT deploy:restart
-
-  failover:
-    action: Failover a pod
-    title: "Failover pod %{POD_ID}"
-    steps:
-      - echo Failover $CLUSTER
-    variables:
-      - name: CLUSTER
-        title: Choose which cluster to deploy to
-        default: 'tier4'
-        select:
-          - tier4
-          - tier4-central
-          - tier4-us-east1-2
-          - tier3

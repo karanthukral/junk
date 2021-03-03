@@ -4,3 +4,4 @@ splunk = "https://logs.shopify.io/en-US/app/search/search?q=search+sourcetype%3D
 html = "https://storage.cloud.google.com/gkrane-logs/apps-b-us-central1-3/mobility-test-app-production-unrestricted/2bb04b9bcae81f55535b757b8c89d39e.html"
 
 puts "Splunk Logs = #{splunk} | HTML Logs = #{html}"
+puts "https://buildkite.com/shopify/bespin-multi-deploy"

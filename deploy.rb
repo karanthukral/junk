@@ -9,4 +9,3 @@ html2 = "https://storage.cloud.google.com/gkrane-logs/apps-b-us-central1-2/mobil
 puts "Splunk Logs = #{splunk} | HTML Logs = #{html}"
 puts "Splunk Logs = #{splunk} | HTML Logs = #{html}"
 puts "Splunk Logs = #{splunk2} | HTML Logs = #{html2}"
-puts "https://buildkite.com/shopify/bespin-multi-deploy"

@@ -1,7 +1,6 @@
 deploy:
   override:
     - ruby deploy.rb
-    - echo "buildkite-trigger abc"
 
 rollback:
   override:

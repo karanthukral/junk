@@ -1,7 +1,4 @@
-deploy:
-  override:
-    - ruby deploy.rb
-
-rollback:
-  override:
-    - echo done
+production_platform:
+  application: junk
+  runtime_ids:
+    - production-unrestricted
